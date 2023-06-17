@@ -1,6 +1,16 @@
 
 const Task = require('../models/task');
 
+
+const guestUserHome = async (req, res) =>{
+   try {
+      req.body
+   } catch (error) {
+      res.status(500).json({ msg: error });
+   }
+}
+
+
 const getAllTasks = async (req, res) => {
    try {
       const tasks = await Task.find({});
